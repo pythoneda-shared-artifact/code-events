@@ -20,7 +20,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 from pythoneda.shared.code_requests import CodeRequestNixFlake
 from pythoneda.shared.code_requests.events import CodePackaged
-from pythoneda.shared.nix_flake import NixFlake
 from typing import List
 
 
@@ -40,7 +39,7 @@ class ChangeStagingCodePackaged(CodePackaged):
     def __init__(
         self,
         codeRequestNixFlake: CodeRequestNixFlake,
-        changeStagingCodeRequestEventId: str = None,
+        changeStagingCodeRequestId: str = None,
         reconstructedId: str = None,
         reconstructedPreviousEventIds: List[str] = None,
     ):
@@ -52,12 +51,13 @@ class ChangeStagingCodePackaged(CodePackaged):
         :type changeStagingCodeRequestId: str
         :param reconstructedId: The id of the event, if it's generated externally.
         :type reconstructedId: str
-        :param reconstructedPreviousEventIds: The id of the previous events, if an external event is being recostructed.
+        :param reconstructedPreviousEventIds: The id of the previous events, if an external event
+        is being reconstructed.
         :type reconstructedPreviousEventIds: List[str]
         """
         super().__init__(
             codeRequestNixFlake,
-            changeStagingCodeRequestEventId,
+            changeStagingCodeRequestId,
             reconstructedId,
             reconstructedPreviousEventIds,
         )

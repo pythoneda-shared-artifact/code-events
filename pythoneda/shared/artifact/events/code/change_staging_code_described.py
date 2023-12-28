@@ -39,7 +39,7 @@ class ChangeStagingCodeDescribed(CodeDescribed):
     def __init__(
         self,
         codeRequest: CodeRequest,
-        changeStagingCodeRequestEventId: str = None,
+        changeStagingCodeRequestId: str = None,
         reconstructedId: str = None,
         reconstructedPreviousEventIds: List[str] = None,
     ):
@@ -51,12 +51,13 @@ class ChangeStagingCodeDescribed(CodeDescribed):
         :type changeStagingCodeRequestId: str
         :param reconstructedId: The id of the event, if it's generated externally.
         :type reconstructedId: str
-        :param reconstructedPreviousEventIds: The id of the previous events, if an external event is being recostructed.
+        :param reconstructedPreviousEventIds: The id of the previous events, if an external event
+        is being reconstructed.
         :type reconstructedPreviousEventIds: List[str]
         """
         super().__init__(
             codeRequest,
-            changeStagingCodeRequestEventId,
+            changeStagingCodeRequestId,
             reconstructedId,
             reconstructedPreviousEventIds,
         )

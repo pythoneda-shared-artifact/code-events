@@ -27,3 +27,11 @@ from .change_staging_code_described import ChangeStagingCodeDescribed
 from .change_staging_code_packaged import ChangeStagingCodePackaged
 from .change_staging_code_requested import ChangeStagingCodeRequested
 from .staged_changes_commit_code_requested import StagedChangesCommitCodeRequested
+# vim: syntax=python ts=4 sw=4 sts=4 tw=79 sr et
+# Local Variables:
+# mode: python
+# python-indent-offset: 4
+# tab-width: 4
+# indent-tabs-mode: nil
+# fill-column: 79
+# End:

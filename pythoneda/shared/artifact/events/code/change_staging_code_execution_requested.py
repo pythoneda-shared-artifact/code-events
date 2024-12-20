@@ -42,7 +42,6 @@ class ChangeStagingCodeExecutionRequested(CodeExecutionRequested):
         codeRequest: CodeRequest,
         previousEventIds: List[str] = None,
         reconstructedId: str = None,
-        reconstructedPreviousEventIds: List[str] = None,
     ):
         """
         Creates a new ChangeStagingCodeExecutionRequested instance.
@@ -52,16 +51,14 @@ class ChangeStagingCodeExecutionRequested(CodeExecutionRequested):
         :type previousEventIds: List[str]
         :param reconstructedId: The id of the event, if it's generated externally.
         :type reconstructedId: str
-        :param reconstructedPreviousEventIds: The id of the previous events, if an external event
-        is being reconstructed.
-        :type reconstructedPreviousEventIds: List[str]
         """
         super().__init__(
             codeRequest,
             previousEventIds,
             reconstructedId,
-            reconstructedPreviousEventIds,
         )
+
+
 # vim: syntax=python ts=4 sw=4 sts=4 tw=79 sr et
 # Local Variables:
 # mode: python
